@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>External Navigation</h1>
+    <!-- <a> tag (anchor) is for hyperlinks 
+         - href attribute is the hyperlink reference (the link to navigate to)
+
+         Links have a target:
+         - _blank = open in new tab
+         - _parent = open in parent document
+         - _self = open in the current tab (default)
+         - _top
+    -->
+    <a href="https://www.google.com" target="_blank">Google _blank</a>
+    <a href="https://www.google.com" target="_self">Google _self</a>
+    <a href="https://www.google.com" target="_top">Google _top</a>
+    <a href="https://www.google.com" target="_parent">Google _parent</a>
+
+    <br>
+    <!--
+        We can use anchors to open the default email client on a system with the recipient email
+        and content prefilled
+    -->
+    <a href="mailto:somemail@emailcom?subject=Hello World&body=Hello there sir/madam">
+        Open email
+    </a>
+
+    <br>
+    <!--
+        Images can also be turned into links by wrapping them in an anchor tag
+        - src attribute specifies where the image is
+        - alt attribute specifies alternate text (this is mandatory)
+    -->
+    <a href="https://www.google.com">
+        <img src="data:image/jpeg;base64,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" alt="This is a placeholder image">
+    </a>
+
+    <br>
+    <h1>Internal Navigation</h1>
+    <a href="./about.html">About</a>
+</body>
+</html>
