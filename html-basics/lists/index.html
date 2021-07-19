@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists</title>
+</head>
+<body>
+    <h1>Lists</h1>
+    <!-- Ordered list
+        - list that orders list items by number (number is default)
+        - use the `start=x`, replace x with a number, to change what num the list starts counting from
+        - specify the `reverse` attribute to display the list in reverse order
+        - the `type` attribute changes what the counting uses:
+            - 1 (default value)
+            - A (alphabetic uppercase)
+            - a (alphabetic lowercase)
+            - I (roman numerals uppercase)
+            - i (roman numerals lowercase)
+    -->
+    <h2>Ordered list</h2>
+    <ol type="1">
+        <li>Eggs</li>
+        <li>Apples</li>
+        <li>Oranges</li>
+    </ol>
+
+    <!-- Unordered list
+         - list items do not have an order
+    -->
+    <h2>Unordered list</h2>
+    <ul>
+        <li>Mazda 787B</li>
+        <li>Sauber C9</li>
+        <li>Spyker C8</li>
+    </ul>
+
+    <!-- Description list
+         - use a name-value grouping
+         - dt tag for description term, any following dd (data definition) tags are associated
+    -->
+    <h2>Description list</h2>
+    <dl>
+        <dt>Mazda 787B</dt>
+        <dd>A rotary powered LMP Car</dd>
+        <dd>The rotary engine is also known as the Wankel engine</dd>
+        <dd>The only rotary powered car to win the 24 hour le mans</dd>
+
+        <dt>Toyota TS050</dt>
+        <dd>An experimental hybrid LMP car</dd>
+    </dl>
+
+    <!-- Nested list
+         - lists can be nested inside of other lists, whether of the same or different type
+    -->
+    <h2>Nested list</h2>
+    <ul>
+        <li>Favourite cars:
+            <dt>Mazda 787B</dt>
+            <dd>Only rotary engine powered car to win the 24 hour le mans</dd>
+
+            <dt>Nissan Skyline R34</dt>
+            <dd>Revolutionised JDM and tuner street racing</dd>
+        </li>
+        <li>Favourite foods:
+            <dt>Pizza</dt>
+            <dd>Can't beat a pepperoni</dd>
+
+            <dt>Grill cheese</dt>
+            <dd>Yumm!</dd>
+        </li>
+    </ul>
+</body>
+</html>
