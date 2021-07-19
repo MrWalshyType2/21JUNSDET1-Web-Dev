@@ -4,9 +4,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Structure</title>
 </head>
 <body>
-    
+    <!-- nav element
+         - use to define internal navigation (i.e. within the current website)
+         - can have multiple nav elements
+         - not necessary in the footer but can be used if wanted
+    -->
+    <nav> <!-- new semantic style -->
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <ul> <!-- Old way -->
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <nav role="navigation"> <!-- Combined -->
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- header element
+         - Use for headings and intros to the page
+         - Can be used to contain the main nav bar alongside other items like a logo
+    -->
+    <header>
+        <h1>Intro to semantic elements</h1>
+        <p>Semantic elements drive web accessibility</p>
+    </header>
+
+    <!-- main element
+         - indicates the main content of the page
+         - this should only appear once per page
+         - no repeatable content (no repeating navigation bars, no repeating header sections)
+         - should not be a child of article, aside, footer, header, or nav elements
+    -->
+    <main>
+        <!-- Section element
+             - semantic element, not pragmatic (i.e. don't use it as a container for styling)
+             - if styling is necessary, use a div tag
+             - should include a heading
+        -->
+        <section>
+            <h2>Blog posts</h2>
+            <!-- Article element
+                 - use for some related content
+            -->
+            <section>
+                <h3>HTML posts</h3>
+                <article>
+                    <h4>Blog post 1</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ut, aliquid laudantium cumque pariatur nam facilis voluptas delectus modi aspernatur.</p>
+                </article>
+            </section>
+            <section>
+                <h3>CSS posts</h3>
+                <article>
+                    <h4>Blog post 1</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ut, aliquid laudantium cumque pariatur nam facilis voluptas delectus modi aspernatur.</p>
+                </article>
+            </section>
+        </section>
+    </main>
+
+    <!-- footer element
+        - Use to indicate the footer of the page
+        - Can contain links
+        - Usually contains <small> text (small for small print, 
+          not actual small text but browsers do sometimes make the text smaller)
+    -->
+    <footer>
+        <!-- &copy; is a character entity -->
+        <p>Copyright &copy; 2021</p>
+    </footer>
 </body>
 </html>
