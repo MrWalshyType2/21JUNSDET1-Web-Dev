@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+</head>
+<body>
+    <h1>Tables</h1>
+    <!-- table element
+         - used for representing tabular data
+         - was commonly used for laying out web pages before HTML5 (very bad practice)
+         - table element signifies a table
+         - tr element signifies a table row
+         - th element signifies a table header
+         - td element signifies table data
+    -->
+    <h2>Basic Table</h2>
+    <table style="border: 3px black dotted;">
+        <tr>
+            <th>Manufacturer</th>
+            <th>Model</th>
+        </tr>
+        <tr>
+            <td>Mazda</td>
+            <td>787B</td>
+        </tr>
+        <tr>
+            <td>Toyota</td>
+            <td>TS050</td>
+        </tr>
+    </table>
+
+    <!-- Spanning columns & rows
+         - Columns and rows in a table can be spanned across (i.e. a td can take up two cells for example)
+         - overlapping rows and columns is bad practice
+    -->
+    <h2>Colspans and rowspans</h2>
+    <table style="border: 1px black solid;">
+        <tr>
+            <th>Manufacturer</th>
+            <th>Model</th>
+        </tr>
+        <tr>
+            <td colspan="2">
+                This spans across 2 columns
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2">Spans 2 rows</td>
+            <td>Mazda</td>
+            <td>787B</td>
+        </tr>
+        <tr> 
+            <td>Toyota</td>
+            <td>TS050</td>
+        </tr>
+    </table>
+
+    <!-- thead, tbody, tfoot and caption elements
+         - these elements help semantically section our table
+         - the tfoot can be above or below the body but not inside it
+           - tfoot will always render at the bottom of the table
+    -->
+    <h2>Advanced table</h2>
+    <table style="border: 1px black solid;">
+        <caption>List of favourite cars</caption>
+        <thead>
+            <th>Manufacturer</th>
+            <th>Model</th>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td>Mazda</td>
+                <td>787B</td>
+            </tr>
+            <tr>
+                <td>Toyota</td>
+                <td>TS050</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td>Cars are</td>
+                <td>awesome</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
