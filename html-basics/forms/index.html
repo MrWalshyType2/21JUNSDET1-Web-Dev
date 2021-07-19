@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>Forms</h1>
+
+    <h2>No labels</h2>
+    <!-- form elements
+         - action attribute specifies URL/script to send/execute data
+         - method attribute specifies the HTTP verb used (GET or POST)
+           - GET reads data from a server (but can send data in query parameters)
+             - google.com?q=apples
+           - POST submits data to a server (POST sends data in the request body)
+    -->
+    <form action="" method="POST">
+        <!-- input elements
+             - various types built into HTML5
+             - some input types come with validation enabled, such as for emails
+             - placeholder attribute signifies placeholder data
+             - value attribute specifies content inside in the input field
+             - required attribute means the form will not submit unless the value is present
+             - name identifies what the input element belongs to
+             - id is a unique identifier
+        -->
+        Name:
+        <input type="text" name="name" placeholder="Bob Smith" required>
+
+        Password:
+        <input type="password" name="password" value="****">
+
+        Age:
+        <input type="number" name="age" min="18" max="67">
+
+        Birthday:
+        <input type="date" name="birthday">
+
+        <!-- button elements
+             - various types:
+               - submit (submits a form)
+               - reset  (clears a form)
+               - button (does nothing)
+        -->
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <button type="button">Does nothing</button>
+    </form>
+
+    <!-- label elements
+         - form input elements should have labels to identify them to screen readers
+         - the label can wrap around the element (for attribute not required)
+         - the label can be separate from the element, using a for attribute to reference the id of
+           the input element it is for
+    -->
+    <h2>With labels</h2>
+    <form action="" method="POST">
+        <fieldset>
+            <legend>Signup form</legend>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Bob Smith" required>
+            
+            <label for="password">
+                Password:
+                <input type="password" name="password" id="password" value="****">
+            </label>
+
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+</body>
+</html>

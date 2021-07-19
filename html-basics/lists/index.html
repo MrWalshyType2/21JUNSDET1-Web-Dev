@@ -11,7 +11,7 @@
     <!-- Ordered list
         - list that orders list items by number (number is default)
         - use the `start=x`, replace x with a number, to change what num the list starts counting from
-        - specify the `reverse` attribute to display the list in reverse order
+        - specify the `reversed` attribute to display the list in reverse order
         - the `type` attribute changes what the counting uses:
             - 1 (default value)
             - A (alphabetic uppercase)
@@ -57,18 +57,22 @@
     <h2>Nested list</h2>
     <ul>
         <li>Favourite cars:
-            <dt>Mazda 787B</dt>
-            <dd>Only rotary engine powered car to win the 24 hour le mans</dd>
+            <dl>
+                <dt>Mazda 787B</dt>
+                <dd>Only rotary engine powered car to win the 24 hour le mans</dd>
 
-            <dt>Nissan Skyline R34</dt>
-            <dd>Revolutionised JDM and tuner street racing</dd>
+                <dt>Nissan Skyline R34</dt>
+                <dd>Revolutionised JDM and tuner street racing</dd>
+            </dl>
         </li>
         <li>Favourite foods:
-            <dt>Pizza</dt>
-            <dd>Can't beat a pepperoni</dd>
+            <dl>
+                <dt>Pizza</dt>
+                <dd>Can't beat a pepperoni</dd>
 
-            <dt>Grill cheese</dt>
-            <dd>Yumm!</dd>
+                <dt>Grill cheese</dt>
+                <dd>Yumm!</dd>
+            </dl>
         </li>
     </ul>
 </body>
