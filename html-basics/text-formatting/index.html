@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Formatting</title>
+</head>
+<body>
+    <h1>Text Manipulation</h1>
+
+    <!-- Highlighting text relevant to some context (semantic) -->
+    <h2>mark</h2>
+    <p>Hello there <mark>Bob</mark></p>
+
+    <!-- Bold, italic and underlined text (non-semantic) 
+         - b tag bolds text
+         - i tag italicises text
+         - u tag underlines text
+         These are visual and do not offer semantic help to screen readers.
+    -->
+    <h2>Non semantic bold, italic and underline</h2>
+    <p>Hello <b>Bob</b>, <i>how are <u>you</u> doing</i>?</p>
+
+    <!-- Bold & Italic (semantic) 
+         - strong tag for strong reading (bold text)
+         - em tag for emphasis on reading (italic text)
+         These adjust how the content is read by screen readers (accessibility focused)
+    -->
+    <h2>Semantic bold and italic</h2>
+    <p>Hello <strong>Bob</strong>, how are <em>you</em> doing?</p>
+
+    <!-- Abbreviations (semantic)
+         - abbr tag for abbreviations
+         - title attribute to indicate what is being abbreviated
+    -->
+    <h2>Abbreviations</h2>
+    <p>I am studying <abbr title="HyperText Markup Language">HTML</abbr></p>
+
+    <!-- Inserted, Deleted or Stricken
+         - ins tag for inserted text (semantic for u tag)
+         - del tag for deleted text (semantic for s tag)
+         - s for strike through
+    -->
+    <h2>Inserted, deleted or stricken</h2>
+    <p><ins>This text was inserted</ins> into here.</p>
+    <p><del>This text was deleted</del> from here.</p>
+    <p><s>This text was striked through</s> here.</p>
+
+    <!-- Superscript, subscript
+        - sup tag for superscript
+        - sub tag for subscript
+    -->
+    <p>27<sup>o</sup>C</p>
+    <p>The number in base 10 is: 16<sub>10</sub></p>
+</body>
+</html>
