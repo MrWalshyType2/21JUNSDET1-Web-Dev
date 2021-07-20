@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascading and Specificity</title>
+
+    <style>
+        /* class selector is more specific then the h1 selector
+           title specificity = 0 1 0
+        */
+        .title {
+            color: red;
+        }
+
+        /* specificity = 0 0 1 */
+        h1 {
+            color: blue;
+        }
+
+        /* specificity = 1 0 0 */
+        #main-lead {
+            color: gray;
+        }
+
+        /* specificity = 0 1 0 */
+        .lead {
+            color: aqua;
+            font-size: 10px;
+        }
+
+        /* descendent element selector
+           specificity = 0 0 3
+        */
+        div > ul > li {
+            font-size: 50px;
+            color: red !important; /* Red styling is applied as this has been made important */
+        }
+
+        /* specificity = 0 1 0 */
+        .list-item {
+            font-size: 20px;
+            color: blue;
+        }
+
+        /* The !important flag will apply the property in a selector no matter its
+           specificity unless multiple element selectors have the same !important
+           property - in this case, normal cascading and specificity rules apply.
+           - it is bad practice to use this flag
+        */
+    </style>
+</head>
+<body>
+    <!-- specificity
+         Each element selector in CSS has a specificity associated with it,
+         these are comprised of 3 groups:
+            - Group A (id selectors)
+            - Group B (class or attribute selectors and pseudo-classes)
+            - Group C (element selectors, psuedo-elements)
+        
+         Group A has the highest specificity followed by B, then C
+            - Universal selector (*) and combinators don't have specificity
+    -->
+    <h1 class="title">Hello</h1>
+    <p class="lead" id="main-lead">
+        hello this is a lead. The font-size came from the 'lead' class, whilst the
+        font colour came from the 'main-lead' id.
+    </p>
+
+    <div>
+        Some list
+        <ul>
+            <li class="list-item">One</li> <!-- font size from list-item class -->
+            <li>Two</li> <!-- font size from descendent element selector -->
+        </ul>
+    </div>
+
+    <!-- Cascade order
+         1. User agent stylesheet (browser default styles)
+         2. User stylesheet (user applied styles that override browser defaults)
+         3. User stylesheet (external css file or style element)
+         4. Inline styles
+    -->
+</body>
+</html>
