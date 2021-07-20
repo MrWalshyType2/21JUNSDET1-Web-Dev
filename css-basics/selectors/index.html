@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+
+    <style>
+        /* wildcard selector (selects everything) */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* id selector */
+        #top-header {
+            margin: 0;
+            padding: 0;
+            font-weight: 900;
+        }
+
+        /* class selector */
+        .navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* descendent selector */
+        .navbar li {
+            display: inline-block;
+        }
+
+        /* child selector (selects only the immediate child li elements of navbar) */
+        .navbar > li {
+
+        }
+
+        /* child selector with pseudo class selector */
+        #top-header > h1:hover {
+            color: brown;
+        }
+
+        /* attribute selector */
+        a[href="#"] {
+            color: red;
+        }
+
+        /* pseudo class selectors */
+        a {color: black; }
+        a:link {color: blue; }
+        a:visited {color: yellow; }
+        a:hover {color: green; }
+
+        /* pseudo element selectors */
+        p::first-letter {
+            color: #ff0000;
+            font-size: xx-large;
+        }
+
+        p::first-line {
+            color: #84b400;
+            font-variant: small-caps;
+        }
+
+        h1::before{
+            content: url(https://media.tenor.com/images/7db260732bbe2a6024d78ac75a3cb18d/tenor.gif);
+        }
+
+        h1::after{
+            content: url(https://media.tenor.com/images/3b388fe03da271d2674faf85eb7c3fcd/tenor.gif);
+        }
+    </style>
+</head>
+<body>
+    <header id="top-header">
+        <h1>Website</h1>
+        <nav>
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, deserunt in optio nisi iusto non. Reiciendis id illo nobis incidunt quidem, ex sint at et animi quasi doloribus atque molestias?</p>
+    <p></p>
+</body>
+</html>
