@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border</title>
+
+    <style>
+        /* Borders
+           - border-radius property can change the shape of a basic box
+        */
+        div {
+            background-color: red;
+            padding: 20px 20px 20px 20px;
+
+            /* border-radius: top-left top-right bottom-right bottom-left */
+            border-radius: 30px 30px 5px 5px;
+
+
+            border-style: dotted;
+            border-color: #22FF00;
+            border-width: 5px;
+            /* border: 5px green solid; */
+
+            /* box-shadow: h-offset v-offset blur spread color; */
+            box-shadow: -20px 1px 3px 0 gray;
+        }
+
+        .round-border {
+            width: 50px;
+            border-radius: 50%;
+
+            border: 1px solid black;
+        }
+
+        .longhand {
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <p>Hello</p>
+    </div>
+    <div>
+        <p>World</p>
+    </div>
+    <div>
+        <p>!</p>
+    </div>
+
+    <div class="round-border">
+        <p>hello</p>
+    </div>
+</body>
+</html>

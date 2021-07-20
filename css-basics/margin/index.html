@@ -10,6 +10,7 @@
         div {
             /* margin: top right bottom left; */
             margin: 20px 20px 20px 20px;
+            background-color: blueviolet;
         }
 
         .longhand {
@@ -28,7 +29,7 @@
 </head>
 <body>
     <!-- margins
-         - margins will vertically collapse when touching
+         - margins will vertically collapse when touching (margin becomes the largest present overlapping margin)
          - margins do not horizontally collapse
 
          The divs will be 20px apart vertically no matter what, the divs margins
@@ -42,6 +43,15 @@
     </div>
     <div>
         <p>!</p>
+    </div>
+    
+    <div style="display: inline-block;">hello</div>
+    <div style="display: inline-block;">bob</div>
+
+    <div class="center"
+    style="width: 80%; height: 40px; background-color: midnightblue;">
+
+            <p class="center" style="width: 30px">Hello</p>
     </div>
 </body>
 </html>
