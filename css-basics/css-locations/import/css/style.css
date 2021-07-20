@@ -1,0 +1,21 @@
+/*
+selector {
+    property-list 
+}
+*/
+
+@import "./style2.css";
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+
+h1 {
+    background-color: midnightblue;
+    font-family: 'Zen Tokyo Zoo', cursive;
+    font-size: 64px;
+}
+
+div {
+    width: 80px; 
+    height: 80px;
+    background-color: red;
+    color: white;
+}

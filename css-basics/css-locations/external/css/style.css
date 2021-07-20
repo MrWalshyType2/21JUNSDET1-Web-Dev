@@ -1,0 +1,18 @@
+/*
+selector {
+    property-list 
+}
+*/
+
+/* element selectors will apply across all of the specified element */
+h1 {
+    color: yellow;
+    background-color: midnightblue;
+}
+
+div {
+    width: 80px; 
+    height: 80px;
+    background-color: red;
+    color: white;
+}
