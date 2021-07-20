@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">  
+</head>
+<body>
+    <!-- Bootstrap
+         - Bootstrap grid built on top of CSS Flexbox
+         - Bootstrap uses a 12 column grid to place elements
+            - each column is an even 1/12 of the display
+         - The columns are contained in rows
+         - The columns can easily be made responsive with certain class names
+    -->
+
+    <!-- Standard container class has margin -->
+    <div class="container">
+        <div class="row">
+            <p class="col-4 bg-danger">Danger</p>
+            <p class="col-4 bg-warning">Warning</p>
+            <p class="col-4 bg-success">Success</p>
+        </div>
+    </div>
+
+    <!-- container-fluid does not have margin (i.e. full width) -->
+    <div class="container-fluid">
+        <div class="row">
+            <p class="col-4 bg-danger">Danger</p>
+            <p class="col-4 bg-warning">Warning</p>
+            <p class="col-4 bg-success">Success</p>
+        </div>
+    </div>
+
+    <!-- justify-content-xxx
+         - justify-content-start (default behaviour, left to right)
+         - justify-content-end (right to left)
+         - justify-content-center (centres content)
+         - justify-content-around (puts space around each element if available)
+         - justify-content-between (puts space between each element if available)
+    -->
+    <div class="container bg-dark">
+        <div class="row justify-content-start">
+            <p class="col-3 bg-danger">Danger</p>
+            <p class="col-3 bg-warning">Warning</p>
+            <p class="col-3 bg-success">Success</p>
+        </div>
+    </div>
+
+    <!-- Responsive design
+         - Responsive design is a cornerstone of modern web development, it ensures
+           that no matter what device we access our site from - it will render cleanly
+           and appropriately for the screen size
+
+         Bootstrap gives variant column classes to use to specify the space dependent
+         on the screen size:
+         - col-xs-xx (>= 0px screen width)
+         - col-sm-xx (>= 576px screen width)
+         - col-md-xx (>= 768px screen width)
+         - col-lg-xx (>= 992px screen width)
+         - col-xl-xx (>= 1200px screen width)
+         - col-xxl-xx (>= 1400px screen width)
+    -->
+    <div class="container bg-dark mt-4">
+        <div class="row justify-content-around">
+            <p class="col-md-3 col-sm-6 col-xs-12 bg-danger">Danger</p>
+            <p class="col-md-3 col-sm-6 col-xs-12 bg-warning">Warning</p>
+            <p class="col-md-3 col-sm-6 col-xs-12 bg-success">Success</p>
+
+            <p class="col-md-3 col-sm-6 col-xs-12 bg-success">Success</p>
+            <p class="col-md-3 col-sm-6 col-xs-12 bg-success">Success</p>
+        </div>
+    </div>
+    
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
