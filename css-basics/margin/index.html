@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin</title>
+
+    <style>
+        div {
+            /* margin: top right bottom left; */
+            margin: 20px 20px 20px 20px;
+        }
+
+        .longhand {
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* margin can be used to center elements in the page */
+        .center {
+            /* top and bottom margin set to 0, left and right set to auto */
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- margins
+         - margins will vertically collapse when touching
+         - margins do not horizontally collapse
+
+         The divs will be 20px apart vertically no matter what, the divs margins
+         are not added together.
+    -->
+    <div>
+        <p>Hello</p>
+    </div>
+    <div>
+        <p>World</p>
+    </div>
+    <div>
+        <p>!</p>
+    </div>
+</body>
+</html>

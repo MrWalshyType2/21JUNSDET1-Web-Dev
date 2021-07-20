@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- The box model
+         - describes the rectangular layout of all HTML elements
+         - each element has multiple layers of the box around it:
+
+            - content (most inner)
+                - width and height are dependent on content
+
+            - padding (signfies spacing wrapped around the content, 
+                       inside the element)
+                - set with the css padding property, if no padding is
+                  specified, it assumes padding equal to the content edge
+
+            - border (signifies the border of the element)
+                - define with the border property
+                - if no border specified, assumes the size of the 
+                  padding edge
+
+            - margin (signifies spacing outside the element/around it)
+                - defined by the margin property
+                - if no margin is defined, assumes the size of the border edge
+    -->
+
+    <p>By default, the width and height only set the content box</p>
+    <ul>
+        <li>This is the default behaviour of HTML elements when box-sizing is set to content-box</li>
+        <li>Padding and border will be added to the width and height</li>
+    </ul>
+    <div id="content-box"></div>
+
+    <p>Box-sizing is set to border-box</p>
+    <ul>
+        <li>Padding and border will be included width and height</li>
+    </ul>
+    <div class="border-box"></div>
+
+    <p>Some elements have a outer display type of block by default,
+       and some have inner. When elements use are only using these <strong>display</strong> properties,
+       they are said to be in <strong>normal flow</strong>.
+    </p>
+    <div class="border-box">
+        <p>A <span>span</span> is an inline element.</p>
+        <p>A div and a p tag are block elements.</p>
+
+        <h3>Block</h3>
+        <ul>
+            <li>Block elements assume the width of their container by default</li>
+            <li>Block elements break onto a new line</li>
+            <li>Width and height properties can be set</li>
+            <li>Padding, margin and border pushes elements away from the box</li>
+        </ul>
+
+        <h3>Inline</h3>
+        <ul>
+            <li>Box doesn't break onto new lines</li>
+            <li>Width and height properties do not work</li>
+            <li>Vertical padding, margins and borders apply but don't push other inline boxes away</li>
+            <li>Horizontal padding, margins and borders apply and will push other inline boxes away</li>
+        </ul>
+    </div>
+</body>
+</html>
