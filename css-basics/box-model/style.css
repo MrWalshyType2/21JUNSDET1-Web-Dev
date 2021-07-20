@@ -1,16 +1,24 @@
+/* # is an id selector, ids should only appear once per html file */
 #content-box {
     width: 40px;
     height: 40px;
+    
+    /* padding: top right bottom left; */
     padding: 8px 8px 8px 8px;
     border: 8px black solid;
-    margin: 8px 8px 8px 8px;
+
+    /* padding: vertical(top and bottom) horizontal(left and right); */
+    margin: 8px 8px;
 
     background-color: red;
     display: block;
+
+    /* box-sizing: content-box; is active by default */
 }
 
+/* . is a class selector, classes can be used as many times as wanted
 .border-box {
-    width: 40px;
+    width: 200px;
     height: 40px;
     padding: 8px 8px 8px 8px;
     border: 8px black solid;
@@ -26,3 +34,14 @@
     /* Example showing the display property */
     display: inline;
 }
+
+.inline-block {
+    display: inline-block;
+}
+
+/* Sets all elements to use border-box box sizing
+   - Recommended to make working with elements easier
+* {
+    box-sizing: border-box;
+}
+*/
