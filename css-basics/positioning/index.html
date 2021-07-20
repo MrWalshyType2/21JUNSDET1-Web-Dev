@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+    
+    <style>
+        h1 {
+            position: static; /* this is the default of all elements */
+        }
+
+        .rel-container {
+            width: 800px;
+            height: 40px;
+            background-color: red;
+            position: relative;
+        }
+
+        .absolute {
+            position: absolute;
+            right: 10px;
+        }
+
+        .relative {
+            position: relative;
+            top: 100px;
+        }
+
+        .fixed {
+            position: fixed;
+            top: 0px;
+            right: 0px;
+            z-index: 1; /* puts element on top of elements with a lower z-index */
+        }
+
+        .zindex {
+            position: absolute;
+            bottom: 10px;
+            left: 48%;
+            right: 48%;
+            width: 30px;
+            height: 30px;
+        }
+
+        #d1 {
+            background-color: red;
+            z-index: 1;
+        }
+
+        #d2 {
+            background-color: blue;
+            z-index: 2;
+        }
+
+        #d3 {
+            background-color: green;
+            z-index: 3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Elements can be positioned outside of the normal document flow, this
+         normal flow is known as `static positioning` (default position of elements)
+         - this is how inline and block elements behave by default
+    -->
+    <h1>Hello World</h1>
+
+    <!-- fixed positioning
+         - useful for items that always appear on the screen and never 
+           leave there position such as widgets and navbars
+         - relative to the browser window
+    -->
+    <p class="fixed">fixed to the top right</p>
+
+    <!-- Relative positioning
+         - positions elements relative to their place in normal flow
+         - can use properties top, right, bottom and left to affect position
+    -->
+    <div>
+        <p class="relative">relatively positioned</p>
+    </div>
+
+    <!-- Absolute positioning
+         - positions elements based on its nearest non-static parent
+         - can use properties top, right, bottom, left, z-index to affect position
+    -->
+    <div class="rel-container">
+        <p class="absolute">Hello there absolutely positioned</p>
+    </div>
+
+
+    <div class="zindex" id="d1"></div>
+    <div class="zindex" id="d2"></div>
+    <div class="zindex" id="d3"></div>
+
+</body>
+</html>
