@@ -34,13 +34,24 @@ footer {
 }
 
 .navbar {
-    list-style-type: none;
-    margin: 0;
+    list-style-type: none;    
     padding: 0;
+    margin: 0;
+    text-align: left; /* Use to modify position of nav elements */
 }
 
 .nav-item {
     display: inline-block;
+    padding: 8px 16px 8px 0px;
+}
+
+.nav-item > a {
+    color: dimgray;
+    text-decoration: none;
+}
+
+.nav-item > a:hover {
+    color: black;
 }
 
 .blog-post-title {
