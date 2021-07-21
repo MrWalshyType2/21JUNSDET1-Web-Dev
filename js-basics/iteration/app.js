@@ -28,6 +28,17 @@ for (const element of arr) {
   console.log(element);
 }
 
+// for in loop
+console.log("FOR IN LOOP");
+let myObj = {
+  name: "Bob",
+  age: 22
+}
+
+for (const key in myObj) {
+  console.log(`The property ${key} has the value ${myObj[key]}`);
+}
+
 // while loop
 console.log("WHILE LOOP");
 let inPlay = true;
