@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <h1>Arrays</h1>
+    <script>
+        /* Arrays
+           - Resizable
+           - Zero indexed
+           - Can be sparsely filled (results in ghost elements xD)
+                - delete an element in the middle of the array, size remains the same... a ghost element remains
+           - Unassigned parts of the array are undefined
+           - Have a constructor and literal notation
+        */
+        let myNums = [1,2,3];
+        let myOtherNums = new Array(1,2,3);
+
+        // Access an array via bracket notation
+        console.log(myNums[1]);
+        myNums[0] = 54;
+
+        // Sort an array
+        // - we can pass custom comparison functions into the .sort() function
+        console.log(`UNSORTED: ${myNums}`);
+        console.log(`SORTED: ${myNums.sort()}`);
+
+        // Append a new element
+        // - use .unshift("element") to insert at the beginning of the array
+        myNums.push("Hello");
+        console.log(myNums);
+
+        // Remove and return the last element in the array
+        // - use .shift() to remove and return the first element in the array
+        let returnedString = myNums.pop();
+        console.log(returnedString);
+
+        // Delete an element
+        delete myNums[2];
+        console.log(`myNums with element at pos 2 deleted: ${myNums} with length ${myNums.length}`);
+        console.log(myNums[2]);
+
+        // Iterating through an array
+        // Two main ways:
+        // - for loop
+        // - for-of
+        console.log("\nITERATION\n- STANDARD FOR:");
+        for (let index = 0; index < myOtherNums.length; index++) {
+            const element = myOtherNums[index];
+            console.log(element);
+        }
+
+        console.log("\n- FOR OF:");
+        for (const element of myOtherNums) {
+            console.log(element);
+        }
+    </script>
+</body>
+</html>
