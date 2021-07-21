@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic DOM Manipulation</title>
+</head>
+<body>
+    <h1>Basic DOM Manipulation</h1>
+
+    <div id="container"></div>
+
+    <script>
+        // selecting an element by id
+        // - query selector can take any type of selector :)
+        let containerElement = document.querySelector("#container");
+
+        // styling the selected element using its style attribute
+        // - hyphenated CSS properties get replaced with camelCase
+        containerElement.style.width = "100px";
+        containerElement.style.height = "100px";
+        containerElement.style.backgroundColor = "red";
+
+        console.log(containerElement);
+
+        // creating a new element in js
+        // - we are programmatically creating an element
+        let leadElement = document.createElement("p");
+        let junkElement = document.createElement("p");
+        leadElement.textContent = "Hello world, this is a lead :D";
+        junkElement.textContent = "Junk";
+
+        // appending the new element as a child of the container
+        containerElement.appendChild(leadElement);
+
+        // append and remove the child
+        containerElement.appendChild(junkElement);
+        containerElement.removeChild(junkElement);
+    </script>
+</body>
+</html>
