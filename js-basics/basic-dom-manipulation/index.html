@@ -37,6 +37,16 @@
         // append and remove the child
         containerElement.appendChild(junkElement);
         containerElement.removeChild(junkElement);
+
+        // appending an element to a p tag
+        let pElement = document.createElement("p");
+        let strongElement = document.createElement("strong");
+
+        strongElement.innerText = "Bob";
+        pElement.innerHTML = "Hello ";
+        pElement.appendChild(strongElement);
+
+        containerElement.appendChild(pElement);
     </script>
 </body>
 </html>
