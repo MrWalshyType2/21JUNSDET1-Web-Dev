@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <h1>Functions</h1>
+    <script>
+        /*
+        - A function is a first class member of JavaScript (first class functions)
+            - this means they can be assigned to variables and passed around as
+              arguments to functions or even returned from functions
+            - A function that takes a function argument or returns a function
+              is called a Higher Order Function (functional programming)
+
+        - A JavaScript function is much like a Java method in that it 
+          can take input as parameter arguments, return output and execute some
+          defined block of code. This helps keep our code DRY (Don't Repeat Yourself)
+
+        - Thanks to hoisting, standard functions can be used before there declaration
+        */
+
+        // standard function declaration and definition
+        console.log("STANDARD FUNCTIONS:");
+
+        myFunc();
+        function myFunc() {
+            console.log("myFunc was called");
+        }
+
+        // function that takes input
+        // - we don't need to specify types
+        function printName(forename, surname) {
+            console.log(`${forename} ${surname}`);
+        }
+        printName("Bob", "Sir")
+
+        // function that returns something
+        function add(num1, num2) {
+            if (typeof(num1) === typeof(3)) {
+                return num1 + num2;
+            }
+            
+        }
+        console.log(`3 + 3 is ${add(3,3)}`);
+        console.log(add("hello", "hello"))
+
+        /* function expressions
+           - a function (normal or arrow) assigned to a variable
+           - cannot be used before declaration
+           - are anonymous, they don't have names
+
+           Arrow functions:
+           - concise function syntax
+           - cannot use for object constructors
+           - not good for class methods due to `this` not being bound to the object
+        */
+        console.log("FUNCTION EXPRESSIONS:")
+
+        let multiply = function(num1, num2) {
+            return num1 * num2;
+        }
+        console.log(`3 x 3 is ${multiply(3,3)}`); // 9
+
+        // arrow functions with 1 parameter do not need parenthesis
+        // - => {} the arrow is used to separate the parameter list from the body
+        let print = input => {
+            console.log(input);
+        }
+        print("Hello world, called print()");
+
+        // If no body {} is specified, a value will be implicitly returned
+        // - multiple parameters require parenthesis
+        let divide = (num1, num2) => num1 / num2;
+        console.log(`10 / 4 is ${divide(10, 4)}`);
+
+        // If a body is specified, the return keyword must be used to return
+        // a value
+        let subtract = (num1, num2) => {
+            return num1 - num2;
+        }
+        console.log(`10 - 5 is ${subtract(10,5)}`);
+    </script>
+</body>
+</html>
