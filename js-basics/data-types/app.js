@@ -33,7 +33,8 @@ let myCar = {
     lemansWins: 1,
     activeInLmp: false,
     engine: {
-        cc: 1000
+        cc: 1000,
+        fuelType: "PETROLEUM"
     }
 };
 
