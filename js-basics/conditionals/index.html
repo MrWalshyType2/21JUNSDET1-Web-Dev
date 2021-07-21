@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditionals</title>
+</head>
+<body>
+    <h1>Conditionals</h1>
+    <script>
+        /*
+          - All values in JavaScript have an inherent boolean value known as being a
+            truthy or falsy value. This occurs as JS is loosely/dynamically typed,
+            we don't need to specify the data type and thus variables can be reused
+            with different data types.
+
+          All values in JS are truthy unless defined as falsy.
+
+          Falsy:
+            - false
+            - 0 (zero)
+            - '' or "" (empty string)
+            - undefined
+            - null
+            - NaN
+
+          Everything else is truthy:
+            - '0' (string)
+            - 'false' (string)
+            - [] (empty array)
+            - {} (empty object)
+            - function() {} (empty function)
+            - etc...
+        */
+        if (!'') {
+            console.log("Strings are falsy when they don't have content")
+        }
+
+        if ('0') {
+            console.log("Strings are truthy when they have content")
+        }
+
+        if (function() {}) {
+            console.log("Functions are truthy as they are objects");
+        }
+
+        // Standard if-elseif-else
+        if (3 > 10) {
+            console.log("3 is greater than 10");
+        } else if (9 > 10) {
+            console.log("9 is greater than 10");
+        } else {
+            console.log("Only numbers above 10, i.e. 11 onwards, are greater than 10");
+        }
+
+        // ternary if
+        let now = new Date();
+        let greeting = "Good";
+
+          // traditional way
+        if (now.getHours() > 17) {
+            greeting += " evening.";
+        } else {
+            greeting += " day.";
+        }
+
+          // ternary statement
+          // let name = condition ? valueReturnedIfTrue : valueReturnedIfFalse;
+          // - ternary statements should be oneline statements
+          // - they should be concise
+        greeting = "Good " + (now.getHours() > 17 ? "evening." : "day.");
+
+        /* Forms of equality
+           JS has four equality algorithms but we are focused on the following:
+           - Abstract Equality Comparison (==)
+                - performs type conversions when comparing two things
+                - Conforms to IEEE 754:
+                    - NaN != NaN
+                    - -0 == +0
+                - Use != for not equal to comparison
+
+           - Strict Equality Comparison (===)
+                - Same comparison as abstract equality, except without type conversion
+                - Use !== for not equal to comparison
+                */
+        if (1 == "1") {
+            console.log("Under abstract equality, numeric 1 is equal to string '1'");
+        }
+
+        if (1 !== "1") {
+            console.log("Under strict equality, numeric 1 is not equal to string '1'");
+        }
+    </script>
+</body>
+</html>
