@@ -123,3 +123,48 @@ const articuno = {
 
 console.log(articuno.abilities);
 console.log(JSON.stringify(articuno));
+
+/*
+1. Select some properties from the JSON Poke API pokemon that you will represent
+   as a object. For example: { name: "Articuno", abilities: [{...},{...}], etc...}
+
+   Link: https://pokeapi.co/
+
+2. Use a template object for storing your poke data (this could be a object literal,
+    a function object, a class, etc...)
+
+3. Store the whole json data of a pokemon within a variable
+
+let dittoJson = {
+  "abilities": [
+    {
+      "ability": {
+        "name": "limber",
+        "url": "https://pokeapi.co/api/v2/ability/7/"
+      },
+      "is_hidden": false,
+      "slot": 1
+    },
+    {
+      "ability": {
+        "name": "imposter",
+        "url": "https://pokeapi.co/api/v2/ability/150/"
+      },
+      "is_hidden": true,
+      "slot": 3
+    }
+  ],
+  "base_experience": 101,
+  "forms": [
+    {
+      "name": "ditto",
+      "url": "https://pokeapi.co/api/v2/pokemon-form/132/"
+    }
+  ],
+  // ...
+
+4. Retrieve data from your pokemon object and store it in your pokemon template object
+   - For example: let ditto = new Pokemon(dittoJson.id, dittoJson.name, etc...)
+
+5. Convert the newly created object into a json string with JSON.stringify()
+   */
