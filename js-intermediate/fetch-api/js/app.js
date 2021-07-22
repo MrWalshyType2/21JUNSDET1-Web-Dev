@@ -7,12 +7,19 @@
 (() => {
     let container = document.querySelector("#container");
 
-    
     function simpleFetch() {
         // GET request
         fetch(`https://jsonplaceholder.typicode.com/posts`)
             .then(response => response.json())
-            .then(data => console.log(data)) // chained so we can handle the js object
+            .then(data => {
+                console.log(data);
+
+                let element = document.createElement("p");
+                element.innerText = data[0].title;
+
+                
+                container.appendChild(element);
+            }) // chained so we can handle the js object
             .catch(error => console.error(error))
             .finally(() => { console.log("All done"); });
     }
