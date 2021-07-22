@@ -30,7 +30,7 @@ function createTableDataRow(data) {
         dataElement.innerText = dataItem;
 
         // append the data element to the data row
-        dataRow.appendChild(header);
+        dataRow.appendChild(dataElement);
     }
     return dataRow;
 }

@@ -1,4 +1,5 @@
 /* Scope
+   - defines accessibility
 Two types:
     - Global
     - Local
@@ -28,7 +29,7 @@ variables can only be accessed within the function.
 
         - A closure does not need to be returned to be classed as a closure
 
-    - Applies to var, let and const
+    - Applies to var, let and const (let and const because they are block scoped)
 
 Block scope is a new type of local scope that was brought into JS in the 
 ECMAScript 2015 (ES6) specification that gave the let and const keywords.
@@ -71,7 +72,7 @@ function hasBlockScopedVariables() {
     const hidden = "hidden in block scope";
     let hidden2 = "also hidden in block scope";
 
-    console.log(`The const and let vars can be accessed inside the scoped environment they where declared in ${hidden}`);
+    console.log(`The const and let vars can be accessed inside the scoped environment they where declared in: ${hidden}`);
 }
 hasBlockScopedVariables();
 // console.log(hidden); // ReferenceError
@@ -101,6 +102,10 @@ hasFunctionScopedVariables();
 /* Closures */
 console.log("CLOSURES");
 
+// titlePrefixer("Janet");
+// - returns a function which we can store in a variable
+// - functions that take a function parameter or return a function are called higher
+//   order functions
 function titlePrefixer(name) {
 
     return function prefix(prefix) {
