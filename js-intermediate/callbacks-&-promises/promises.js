@@ -27,7 +27,7 @@ let newPromise = new Promise((resolve, reject) => {
             reject("Failed");
         }, 5000); // 5000 milliseconds/5 seconds
     }
-})
+});
 
 //we then pass the value from resolve or reject and we set it to message.
 //.then() is executed if Fulfilled/successful.

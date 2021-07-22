@@ -7,6 +7,7 @@
 (() => {
     let container = document.querySelector("#container");
 
+    
     function simpleFetch() {
         // GET request
         fetch(`https://jsonplaceholder.typicode.com/posts`)
