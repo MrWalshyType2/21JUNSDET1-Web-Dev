@@ -21,6 +21,43 @@
 
             Anonymous
         */
+
+
+      function anonFunction(){
+          console.log(anon); // undefined
+
+          anon(); // TypeError anon is not a function 
+
+          // anonymous function expression
+          // - variable name gets hoisted, but the assignment/function
+          var anon = function(){
+              console.log('anonymous function expression');
+          };
+      }
+
+      function namedFunction(){
+          console.log(named); // undefined
+
+          named(); // TypeError named is not a function 
+
+          superPower(); // ReferenceError superPower is not defined
+
+          // named function expression
+          // - variable name gets hoisted
+          // - the function assignment and the named function do not get hoisted
+          var named = function superPower(){
+              console.log("Zoomin' through the sky");
+          };
+      }
+
+      function example(){
+          superPower()// => Zoomin' thru the sky.
+
+          // normal function declaration
+          function superPower(){
+              console.log("Zoomin' thru the sky.");
+          }
+      }
     </script>
 </body>
 </html>
