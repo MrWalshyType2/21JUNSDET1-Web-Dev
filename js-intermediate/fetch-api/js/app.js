@@ -6,28 +6,29 @@
 
 (() => {
     let container = document.querySelector("#container");
-
+    
     function simpleFetch() {
-        // GET request
+        // GET request to an API
         fetch(`https://jsonplaceholder.typicode.com/posts`)
-            .then(response => response.json())
-            .then(data => {
+            .then(response => response.json()) // successful response
+            .then(data => { // response promise resolved into JS object called data
                 console.log(data);
-
+                
                 let element = document.createElement("p");
                 element.innerText = data[0].title;
-
                 
                 container.appendChild(element);
             }) // chained so we can handle the js object
-            .catch(error => console.error(error))
+            .catch(error => console.error(error)) // insuccessful response
             .finally(() => { console.log("All done"); });
     }
 
-    simpleFetch();
+    // simpleFetch();
 
     function fetchPost(id) {
         // provide a target url
+        // - provide the id as a path variable/parameter
+        // - query parameters look like: com/posts?id=1
         fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
             .then((response) => {
                 // check for response OK (200)
@@ -39,7 +40,6 @@
                 return response.json();
             }).then(data => {
                 console.log(data);
-                return data;
             }).catch(error => {
                 console.error(error);
             });
@@ -49,12 +49,12 @@
         // provide a target url
         fetch('https://jsonplaceholder.typicode.com/posts', {
             method: 'POST',
-            body: JSON.stringify(post),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
             },
+            body: JSON.stringify(post)
         }).then((response) => {
-            // check for response OK (200)
+            // check for response CREATED (201)
             if (response.status !== 201) {
                 console.error(`status: ${response.status}`);
                 return;
@@ -63,14 +63,14 @@
             return response.json();
         }).then(data => {
             console.log(data);
-            return data;
         }).catch(error => {
             console.error(error);
         });
     }
 
     function updatePost(post, id) {
-        post.id = id;
+        post.id = id; // not required by this api, but the id could be 
+                      // required on resources for other apis
         // provide a target url
         fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
             method: 'PUT',
@@ -88,7 +88,6 @@
             return response.json();
         }).then(data => {
             console.log(data);
-            return data;
         }).catch(error => {
             console.error(error);
         });
