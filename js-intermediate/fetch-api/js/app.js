@@ -119,4 +119,13 @@
     // createPost(new Post("Test", "A description", 3));
     // updatePost(new Post("Test", "Test description", 43), 1);
     // deletePost(1);
+
+    let fetchDataBtn = document.querySelector("#fetchBtn");
+    let simpleFetchBtn = document.querySelector("#simpleFetchBtn");
+
+    fetchDataBtn.addEventListener("click", () => {
+        fetchPost(3);
+    }, false);
+
+    simpleFetchBtn.addEventListener("click", simpleFetch, false);
 })();
